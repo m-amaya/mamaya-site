@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { config } from "~/styles";
 import { tokens } from "~/tokens";
 
-export type { IconNames } from "~/tokens/icons";
+// export type { IconNames } from "~/tokens/icons";
 export type ReactChildren = ReactNode | ReactNode[];
 export type StitchesCSS = CSS<typeof config>;
 export type FontStyleType = keyof typeof tokens.fontSizes;
