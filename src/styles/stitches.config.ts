@@ -1,6 +1,5 @@
 import { createStitches } from "@stitches/react";
 import { tokens } from "~/tokens";
-import type { FontStyleType } from "~/types";
 import rgba from "~/utils/rgba";
 
 function replace<T>(vars: T, template: string) {
@@ -24,7 +23,10 @@ const {
   zIndex,
 } = tokens;
 
-const lightTheme = {};
+const lightTheme = {
+  pageBg: palette.white,
+  text: palette.gray900,
+};
 
 export const {
   styled,
@@ -46,14 +48,6 @@ export const {
   },
   media: replace(breakpoints, "(min-width: %px)"),
   utils: {
-    // typography
-    textStyle: (type: FontStyleType) => ({
-      color: "$text",
-      fontFamily: "$jakarta",
-      fontSize: `$${type}`,
-      fontWeight: type.search(/h/i) > -1 ? "$bold" : "$medium",
-      lineHeight: `$${type}`,
-    }),
     // states
     focusRing: (color: keyof typeof palette) => ({
       outlineColor: rgba(color, 0.35),
@@ -73,4 +67,9 @@ export const {
   },
 });
 
-export const darkTheme = createTheme({});
+export const darkTheme = createTheme({
+  colors: {
+    pageBg: palette.gray900,
+    text: palette.gray400,
+  },
+});

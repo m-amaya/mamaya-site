@@ -1,3 +1,28 @@
 {
-  "palette": {}
+  "palette": {
+    "white": {
+      "value": "#FFF"
+    },
+    "gray400": {
+      "value": "#BDBDBD"
+    },
+    "gray600": {
+      "value": "#757575"
+    },
+    "gray900": {
+      "value": "#212121"
+    },
+    "black": {
+      "value": "#000"
+    },
+    "pink": {
+      "value": "#FE53BB"
+    },
+    "purple": {
+      "value": "#7B61F8"
+    },
+    "teal": {
+      "value": "#09FBD3"
+    }
+  }
 }
